@@ -1,0 +1,19 @@
+citHeader("To cite valueR in publications use:")
+
+citEntry(
+  entry    = "Article",
+  title    = "Improving Stochastic Analysis for Tradeoffs in Multi-Criteria Value Models",
+  author   = personList(as.person("John Caddell"),
+                   as.person("Matthew Dabkowski"),
+                   as.person("Patrick Driscoll"),
+                   as.person("Patrick DuBois")),
+  journal  = "Journal of Multi-Criteria Decision Analysis",
+  year     = "2020",
+  volume   = "27",
+  number   = "5-6",
+  pages    = "304-317",
+  url      = "https://doi.org/10.1002/mcda.1717"
+  textVersion = paste(
+
+  )
+)
