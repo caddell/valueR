@@ -2,10 +2,10 @@ valueR - helping characterize uncertainty in value modeling
 ================
 
 This R package can be installed with
-devtools::install_github(“caddell/valueR)
+devtools::install_github(“caddell/valueR”)
 
-Please cite the package with the assocaited paper
-(<https://doi.org/10.1002/mcda.1717>).
+Please review the associated paper (<https://doi.org/10.1002/mcda.1717>)
+for details and cite as appropriate.
 
 ``` r
 #install from github if needed

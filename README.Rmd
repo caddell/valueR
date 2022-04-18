@@ -8,9 +8,9 @@ editor_options:
 ```{r setup, include=FALSE} 
 knitr::opts_chunk$set(warning = FALSE, message = FALSE) 
 ```
-This R package can be installed with devtools::install_github("caddell/valueR)
+This R package can be installed with devtools::install_github("caddell/valueR")
 
-Please cite the package with the assocaited paper (https://doi.org/10.1002/mcda.1717). 
+Please review the associated paper (https://doi.org/10.1002/mcda.1717) for details and cite as appropriate.
 ```{r message=FALSE, warning=FALSE}
 #install from github if needed
 #devtools::install_github("caddell/valueR")
@@ -23,8 +23,6 @@ library(ggthemes)
 Build a set of alternatives for us to investigate.
 
 ```{r message=FALSE, warning=FALSE}
-
-
 set.seed(123)
 n = 1000
 
