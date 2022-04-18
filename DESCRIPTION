@@ -4,8 +4,12 @@ Title: Helps evaluate value modeles under uncertainty
 Version: 0.1.0
 Author: JD Caddell
 Maintainer: The package maintainer <caddell.jd@gmail.com>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
+Description: This package implements a method outlined in the paper "Improving Stochastic Analysis for Tradeoffs in Multi-Criteria Value Models" (https://doi.org/10.1002/mcda.1717). Please reference that work for additional information.
 License: What license is it under?
 Encoding: UTF-8
 LazyData: true
+Imports:
+    dplyr,
+    tidyr,
+    ggplot2,
+    ggthemes
