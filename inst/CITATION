@@ -12,7 +12,7 @@ citEntry(
   volume   = "27",
   number   = "5-6",
   pages    = "304-317",
-  url      = "https://doi.org/10.1002/mcda.1717"
+  url      = "https://doi.org/10.1002/mcda.1717",
   textVersion = paste("Caddell, John & Dabkowski, Matthew & Driscoll, Patrick & DuBois, Patrick. (2020).",
         "Improving stochastic analysis for tradeoffs in multi‐criteria value models.",
         "Journal of Multi-Criteria Decision Analysis. 27, 304-317.",
