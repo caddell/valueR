@@ -90,7 +90,7 @@ all.alternatives = rbind(orange, green, blue, yellow, purple, red)
 ## Plot the data
 
 The first step to any problem: Visualize the data. This is how we
-normally see the out put of simulation.
+normally see the output of a simulation.
 
 ``` r
 #plot alternative as mean of alternatives
