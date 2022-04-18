@@ -11,6 +11,32 @@ Please cite the package with the assocaited paper
 #install from github if needed
 #devtools::install_github("caddell/valueR")
 library(valueR)
+#cite using citation
+citation("valueR")
+```
+
+    ## 
+    ## To cite valueR in publications use:
+    ## 
+    ##   Caddell, John & Dabkowski, Matthew & Driscoll, Patrick & DuBois,
+    ##   Patrick. (2020). Improving stochastic analysis for tradeoffs in
+    ##   multi‐criteria value models. Journal of Multi-Criteria Decision
+    ##   Analysis. 27, 304-317. URL https://doi.org/10.1002/mcda.1717
+    ## 
+    ## A BibTeX entry for LaTeX users is
+    ## 
+    ##   @Article{,
+    ##     title = {Improving Stochastic Analysis for Tradeoffs in Multi-Criteria Value Models},
+    ##     author = {John Caddell and Matthew Dabkowski and Patrick Driscoll and Patrick DuBois},
+    ##     journal = {Journal of Multi-Criteria Decision Analysis},
+    ##     year = {2020},
+    ##     volume = {27},
+    ##     number = {5-6},
+    ##     pages = {304-317},
+    ##     url = {https://doi.org/10.1002/mcda.1717},
+    ##   }
+
+``` r
 library(tidyverse)
 library(ggthemes)
 ```
@@ -61,8 +87,10 @@ red = tibble(
 all.alternatives = rbind(orange, green, blue, yellow, purple, red)
 ```
 
-#Plot the data The first step to any problem: Visualize the data. This
-is how we normally see the out put of simulation.
+## Plot the data
+
+The first step to any problem: Visualize the data. This is how we
+normally see the out put of simulation.
 
 ``` r
 #plot alternative as mean of alternatives
@@ -81,7 +109,9 @@ ggplot(data = mean.alt, aes(x = cost, y = value, color = alternative, fill = alt
 
 ![](README_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
 
-#Plot ALL the data Try it again with all the alternatives and densities.
+## Plot ALL the data
+
+Try it again with all the alternatives and densities.
 
 ``` r
 #plot alternative as points w/ densities
@@ -104,14 +134,15 @@ of an alternative. It gives the stakeholder more information.
 Unfortunately, this can be unhelpful at times and lead to decision
 paralysis. What do we do next?
 
-#Level 1 Anlaysis We’ve found it helpful to talk about alternative
-pairwise comparisons in terms of dominance. In general, you have four
-types of dominance. An alternative is dominate over another if the
-alternative returns more value at the same or less cost. Naturally it
-is, dominated if it returns less value for more cost. If an alternative
-returns more value, but for more cost, then we consider it
-pareto-optimal plus. If it has less value, but costs less, we consider
-it pareto-optimal minus.
+## Level 1 Anlaysis
+
+We’ve found it helpful to talk about alternative pairwise comparisons in
+terms of dominance. In general, you have four types of dominance. An
+alternative is dominate over another if the alternative returns more
+value at the same or less cost. Naturally it is, dominated if it returns
+less value for more cost. If an alternative returns more value, but for
+more cost, then we consider it pareto-optimal plus. If it has less
+value, but costs less, we consider it pareto-optimal minus.
 
 If we consdier the means of our alternatives, we can easily identify
 dominance. Lets consider red and blue.
@@ -209,9 +240,10 @@ level1_green_red$final_table
     ## green/red.pareto_optimal_plus          234 0.02557098
     ## green/red.pareto_optimal_minus        5285 0.57753251
 
-#Level 2 Lets suppose that our decision maker is comfortable “picking”
-the red alternative. We should try and give them an expectation of this
-choice.
+## Level 2
+
+Lets suppose that our decision maker is comfortable “picking” the red
+alternative. We should try and give them an expectation of this choice.
 
 ``` r
 expectations = level2(green,red, .25)

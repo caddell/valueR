@@ -15,11 +15,11 @@ Please cite the package with the assocaited paper (https://doi.org/10.1002/mcda.
 #install from github if needed
 #devtools::install_github("caddell/valueR")
 library(valueR)
+#cite using citation
+citation("valueR")
 library(tidyverse)
 library(ggthemes)
 ```
-
-
 Build a set of alternatives for us to investigate.
 
 ```{r message=FALSE, warning=FALSE}
@@ -69,7 +69,8 @@ all.alternatives = rbind(orange, green, blue, yellow, purple, red)
 
 ```
 
-#Plot the data
+## Plot the data
+
 The first step to any problem: Visualize the data. This is how we normally see the out put of simulation.
 
 ```{r message=FALSE, warning=FALSE}
@@ -90,7 +91,8 @@ ggplot(data = mean.alt, aes(x = cost, y = value, color = alternative, fill = alt
 
 ```
 
-#Plot ALL the data
+## Plot ALL the data
+
 Try it again with all the alternatives and densities.
 ```{r message=FALSE, warning=FALSE}
 #plot alternative as points w/ densities
@@ -108,7 +110,8 @@ ggplot(data = all.alternatives, aes(x = cost, y = value, color = alternative, fi
 
 This visualization helps us better understand the spread and uncertainty of an alternative. It gives the stakeholder more information. Unfortunately, this can be unhelpful at times and lead to decision paralysis. What do we do next?
 
-#Level 1 Anlaysis
+## Level 1 Anlaysis
+
 We've found it helpful to talk about alternative pairwise comparisons in terms of dominance. In general, you have four types of dominance. An alternative is dominate over another if the alternative returns more value at the same or less cost. Naturally it is, dominated if it returns less value for more cost. If an alternative returns more value, but for more cost, then we consider it pareto-optimal plus. If it has less value, but costs less, we consider it pareto-optimal minus.
 
 If we consdier the means of our alternatives, we can easily identify dominance. Lets consider red and blue.
@@ -166,7 +169,7 @@ level1_green_red = level1(green,red)
 level1_green_red$final_table
 ```
 
-#Level 2
+## Level 2
 Lets suppose that our decision maker is comfortable "picking" the red alternative. We should try and give them an expectation of this choice. 
 
 ```{r message=FALSE, warning=FALSE}
